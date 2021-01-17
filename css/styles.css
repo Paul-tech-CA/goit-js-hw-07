@@ -1,0 +1,14 @@
+#gallery {
+  display: flex;
+  list-style-type: none;
+}
+img {
+  width: 100px;
+  height: 70px;
+  margin-right: 10px;
+  display: block;
+
+  /* text-align: center; */
+
+  /* height: 40px; */
+}
