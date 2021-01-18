@@ -1,43 +1,31 @@
-'use strict';
-// Напиши класс StringBuilder. На вход он получает один параметр -
-// строку, которую записывает в свойство _value.
+/*
+Счетчик состоит из спана и кнопок, которые должны увеличивать 
+и уменьшать значение счетчика на 1.
 
-// Добавь классу следующий функционал:
+Создай переменную counterValue в которой будет хранится 
+текущее значение счетчика.
+Создай функции increment и decrement для увеличения и 
+уменьшения значения счетчика
+Добавь слушатели кликов на кнопки, вызовы функций и 
+обновление интерфейса
+*/
+const counterValue = document.querySelector('#value');
+let value = 0;
+const decrementBtnRef = document.querySelector(
+  '#counter button[data-action="decrement"]',
+);
+const incrementBtnRef = document.querySelector(
+  '#counter button[data-action="increment"]',
+);
+const increment = () => {
+  value += 1;
+  counterValue.textContent = value;
+};
 
-// Геттер value - возвращает текущее значение поля _value
-// Метод append(str) - получает парметр str (строку) и добавляет ее в конец _value
-// Метод prepend(str) - получает парметр str (строку) и добавляет ее в начало value
-// Метод pad(str) - получает парметр str (строку) и добавляет ее в начало и в конец _value
+const decrement = () => {
+  value -= 1;
+  counterValue.textContent = value;
+};
 
-class StringBuilder {
-  constructor(value) {
-    this._value = value;
-  }
-
-  get value() {
-    return this._value;
-  }
-
-  append(str) {
-    this._value += str;
-  }
-
-  prepend(str) {
-    this._value = str + this._value;
-  }
-
-  pad(str) {
-    this._value = str + this._value + str;
-  }
-}
-
-const builder = new StringBuilder('.');
-
-builder.append('^');
-console.log(builder.value); // '.^'
-
-builder.prepend('^');
-console.log(builder.value); // '^.^'
-
-builder.pad('=');
-console.log(builder.value); // '=^.^='
+incrementBtnRef.addEventListener('click', increment);
+decrementBtnRef.addEventListener('click', decrement);
