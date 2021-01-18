@@ -30,7 +30,6 @@ const images = [
 ];
 
 const newList = images.map(({ url, alt }) => {
-  // console.log('url');
   const liCreating = document.createElement('li');
   const picture = document.createElement('img');
   liCreating.appendChild(picture);
@@ -39,6 +38,5 @@ const newList = images.map(({ url, alt }) => {
   return liCreating;
 });
 
-console.log(newList);
 const listItem = document.querySelector('#gallery');
 listItem.append(...newList);

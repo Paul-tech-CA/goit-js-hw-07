@@ -16,18 +16,12 @@
 Количество элементов: 4
 */
 
-const amountCategoriesRef = categories.querySelectorAll('.item');
-console.log(`'В списке ${amountCategoriesRef.length} категории.'`);
-
-const titleRef = [...amountCategoriesRef].map(item => item > 'LI');
-console.log(titleRef);
-
-// const categoriesInfoRef = amountCategoriesRef.forEach(item =>
-//   console.log(
-//     `Категория: ${item.querySelector('h2').textContent}
-// Количество элементов: ${item.querySelectorAll('li').length}`,
-//   ),
-// );
+const categoriesInfoRef = amountCategoriesRef.forEach(item =>
+  console.log(
+    `Категория: ${item.querySelector('h2').textContent}
+Количество элементов: ${item.querySelectorAll('li').length}`,
+  ),
+);
 
 // const tryRef = categories.item.childNodes;
 // console.log(tryRef);
@@ -36,6 +30,15 @@ console.log(titleRef);
 //   item => console.log('forEach 1', `Категория: ${item.textContent}`),
 //   // console.log(item),
 // );
+
+//-------------------------
+// const amountCategoriesRef = categories.querySelectorAll('.item');
+// console.log(`'В списке ${amountCategoriesRef.length} категории.'`);
+
+// const titleRef = [...amountCategoriesRef].map(item => item > 'LI');
+// console.log(titleRef);
+
+//---------------------
 
 // console.log('h2', textTitleRef[2].textContent);
 // console.log('li', countItemsRef);

@@ -7,11 +7,8 @@
 // стилей, используй CSS-классы valid и invalid.
 
 const inputRef = document.querySelector('#validation-input');
-// const lengthRef = document.querySelectorAll('#validation-input');
 
 inputRef.addEventListener('blur', event => {
-  console.log('const', inputRef.getAttribute('data-length'));
-  console.log('inp', event.target.value.length);
   if (
     event.target.value.length > inputRef.getAttribute('data-length') ||
     event.target.value.length < inputRef.getAttribute('data-length')

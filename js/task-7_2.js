@@ -28,7 +28,6 @@ const ingredients = [
 const newItem = ingredients.map(item => {
   const elemList = document.createElement('li');
   elemList.textContent = item;
-
   return elemList;
 });
 
