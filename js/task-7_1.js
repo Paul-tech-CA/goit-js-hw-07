@@ -16,15 +16,15 @@
 Количество элементов: 4
 */
 
-const amountCategoriesRef = categories.querySelectorAll('.item');
-console.log(`'В списке ${amountCategoriesRef.length} категории.'`);
+// const amountCategoriesRef = categories.querySelectorAll('.item');
+// console.log(`'В списке ${amountCategoriesRef.length} категории.'`);
 
-const categoriesInfoRef = amountCategoriesRef.forEach(item =>
-  console.log(
-    `Категория: ${item.querySelector('h2').textContent}
-Количество элементов: ${item.querySelectorAll('li').length}`,
-  ),
-);
+// const categoriesInfoRef = amountCategoriesRef.forEach(item =>
+//   console.log(
+//     `Категория: ${item.querySelector('h2').textContent}
+// Количество элементов: ${item.querySelectorAll('li').length}`,
+//   ),
+// );
 
 // const tryRef = categories.item.childNodes;
 // console.log(tryRef);
@@ -36,8 +36,9 @@ const categoriesInfoRef = amountCategoriesRef.forEach(item =>
 
 //-------------------------
 //
-// const tray = amountCategoriesRef.childrenNodes;
-// console.log(amountCategoriesRef);
+const testRef = categories.querySelector('.item');
+const tray = amountCategoriesRef.childrenNodes;
+console.log(testRef);
 
 // const titleRef = [...amountCategoriesRef].map(item => item > 'LI');
 // console.log(titleRef);

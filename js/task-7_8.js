@@ -13,3 +13,37 @@
 // Каждый следующий div после первого, должен быть шире и выше
 // предыдущего на 10px
 // Создай функцию destroyBoxes(), которая очищает div#boxes.
+
+const ref = {
+  renderBtn: document.querySelector('[data-action="render"]'),
+  destroyBtn: document.querySelector('#controls button[data-action="destroy"]'),
+  boxes: document.getElementById('boxes'),
+};
+ref.renderBtn.addEventListener('click', getNumbers);
+ref.destroyBtn.addEventListener('click', deleteBoxes);
+
+function getNumbers() {
+  let number = +document.querySelector('#controls > input').value;
+  createBoxes(number);
+}
+
+function createBoxes(number) {
+  const basicSize = 30;
+  const part = document.createDocumentFragment();
+  for (let i = 0; i < number; i += 1) {
+    let size = basicSize + i * 10;
+    let div = document.createElement('div');
+    div.style.cssText = `width: ${size}px; height: ${size}px; background-color: rgba(${rand()}, ${rand()}, ${rand()})`;
+    part.appendChild(div);
+  }
+  boxes.appendChild(part);
+}
+
+function deleteBoxes() {
+  boxes.innerHTML = '';
+}
+
+function rand() {
+  return Math.floor(Math.random() * 256);
+}
+// console.log(rand());
