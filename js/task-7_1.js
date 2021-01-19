@@ -16,6 +16,9 @@
 Количество элементов: 4
 */
 
+const amountCategoriesRef = categories.querySelectorAll('.item');
+console.log(`'В списке ${amountCategoriesRef.length} категории.'`);
+
 const categoriesInfoRef = amountCategoriesRef.forEach(item =>
   console.log(
     `Категория: ${item.querySelector('h2').textContent}
@@ -32,8 +35,9 @@ const categoriesInfoRef = amountCategoriesRef.forEach(item =>
 // );
 
 //-------------------------
-// const amountCategoriesRef = categories.querySelectorAll('.item');
-// console.log(`'В списке ${amountCategoriesRef.length} категории.'`);
+//
+// const tray = amountCategoriesRef.childrenNodes;
+// console.log(amountCategoriesRef);
 
 // const titleRef = [...amountCategoriesRef].map(item => item > 'LI');
 // console.log(titleRef);
