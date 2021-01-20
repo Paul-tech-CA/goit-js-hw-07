@@ -33,7 +33,8 @@ function createBoxes(number) {
   for (let i = 0; i < number; i += 1) {
     let size = basicSize + i * 10;
     let div = document.createElement('div');
-    div.style.cssText = `width: ${size}px; height: ${size}px; background-color: rgba(${rand()}, ${rand()}, ${rand()})`;
+    div.style.cssText = `width: ${size}px; height: ${size}px;`;
+    div.style.backgroundColor = randomColor();
     part.appendChild(div);
   }
   boxes.appendChild(part);
@@ -43,7 +44,10 @@ function deleteBoxes() {
   boxes.innerHTML = '';
 }
 
-function rand() {
-  return Math.floor(Math.random() * 256);
+function randomColor() {
+  let color;
+  return (color = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(
+    Math.random() * 256,
+  )}, ${Math.floor(Math.random() * 256)})`);
 }
-// console.log(rand());
+console.log(randomColor());
